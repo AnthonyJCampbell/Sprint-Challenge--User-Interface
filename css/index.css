@@ -58,18 +58,62 @@ html, body {
 
 h1, h2, h3, h4, h5 {
     font-size: 18px;
+    font-weight: 600;
     margin-bottom: 15px;
     font-family: 'Rubik', sans-serif;
 }
 
 p {
     line-height: 1.4;
+    font-weight: 500;
 }
 
 .container {
     width: 800px;
     margin: 0 auto;
 }
+
+
+/* Site-wide Navigation bar and header image */
+header {
+    padding-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px 0 35px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    font-weight: 300;
+}
+
+nav a:last-child {
+    margin-right: 50px;
+}
+
+.logo {
+    width: 250px;
+}
+
+
+nav figure {
+    width: 100%;
+}
+/* END OF HEADER */
+
+
+
+/* INDEX */
 
 .top-content {
     display: flex;
@@ -80,9 +124,17 @@ p {
 }
 
 .top-content .text-container {
-    width: 48%;
+    width: 100%;
     padding: 0 1%;
     padding-bottom: 20px;  
+    text-align: center;
+}
+
+@media only screen and (min-width: 900px) {
+    .top-content .text-container {
+        text-align: start;
+        width: 48%;
+    }
 }
 
 .middle-content {
@@ -102,8 +154,8 @@ p {
 }
 
 .middle-content .boxes .box {
-    width: 12.5%;
-    height: 100px;
+    width: 25%;
+    height: 200px;
     background: black;
     margin: 20px 2.5%;
     color: white;
@@ -112,19 +164,176 @@ p {
     justify-content: center;
 }
 
+@media only screen and (min-width: 900px) {
+    .middle-content .boxes .box {
+        width: 12.5%;
+        height: 100px;
+    }
+}
+
+
+/* COMPACTED BOX STYLING */
+.middle-content .boxes .box.teal {
+    background: teal;
+}
+.middle-content .boxes .box.gold {
+    background: gold;
+}
+.middle-content .boxes .box.cadetblue {
+    background: cadetblue;
+}
+.middle-content .boxes .box.coral {
+    background: coral;
+}
+.middle-content .boxes .box.crimson {
+    background: crimson;
+}
+.middle-content .boxes .box.forestgreen {
+    background: forestgreen;
+}
+.middle-content .boxes .box.darkorchid {
+    background: darkorchid;
+}
+.middle-content .boxes .box.hotpink {
+    background: hotpink;
+}
+.middle-content .boxes .box.indigo {
+    background: indigo;
+}
+.middle-content .boxes .box.dodgerblue {
+    background: dodgerblue;
+}
+/* END OF BOX STYLING */
+
 .bottom-content {
     display: flex;
     margin: 0 2% 20px;
     justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 900px) {
+    .bottom-content {
+        flex-wrap: nowrap;
+    }
 }
 
 .bottom-content .text-container {
     padding-right: 4%;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed black;
+    margin-top: 10px;
+}
+@media only screen and (min-width: 900px) {
+    .bottom-content .text-container {
+        margin-top: 0;
+        border: 0px solid black;
+        padding-bottom: 0;
+    }
 }
 
-.bottom-content .text-container:last-child {
-    padding-right: 0;
+@media only screen and (min-width: 900px) {
+    .bottom-content .text-container:last-child {
+        padding-right: 0;
+        
+    }
 }
+
+/* END OF INDEX */
+
+
+/* ABOUT PAGE */
+
+.description {
+    padding: 0 20px 20px 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px dashed black;
+}
+
+.sectiongrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.about-section {
+    width: 75%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed black;
+    margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 900px) {
+    .about-section {
+        width: 47%;
+        text-align: start;
+    }
+}
+
+.about-section h2{
+    padding-top: 12px;
+}
+
+.about-section p {
+    margin-bottom: 30px;
+}
+
+.about-section a {
+    text-decoration: none;
+    color: black;
+    padding: 8px 25px;
+    border: 3px solid black;
+    border-radius: 12px;
+    font-weight: 900;
+}
+
+summary {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 900px) {
+    summary {
+        text-align: start;
+    }
+}
+
+/* END OF ABOUT PAGE */
+
+
+
+/* PRODUCTS PAGE */
+
+.about-section.full-width-section {
+    width: 75%;
+    text-align: center;
+}
+
+@media only screen and (min-width: 900px) {
+    .about-section.full-width-section {
+    width: 100%;
+    }
+}
+
+
+
+.about-section .buynow {
+    background-color: crimson;
+    color: #EEE;
+    border-color: #DDD;
+    text-decoration: underline; 
+}
+
+.about-section .buynow:hover {
+    background-color: crimson;
+}
+
+/* END OF PRODUCTS PAGE */
+
+/* FOOTER */
 
 footer {
     width: 100%;
